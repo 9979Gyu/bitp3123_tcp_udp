@@ -68,34 +68,6 @@ public class CustomerDataManager{
 		
 	}
 	
-	
-	/*
-	 * This method searches a customer based on 
-	 * the customer's name from a list of customers.
-	 * It will return list of customers 
-	 * which name is matched
-	 * @return
-	 * 
-	 */
-	public List<Customer> getCustomers(String name) {
-		
-		List<Customer> matchedCustomers = new ArrayList<>();
-		
-		for(Customer customer: customerList) {
-			
-			// check if the customer exist
-			if((customer.getName().toLowerCase()).
-					contains(name.toLowerCase()))
-			{
-				matchedCustomers.add(customer);
-			}
-			
-		}
-		
-		return matchedCustomers;
-		
-	}
-	
 	/*
 	 * This method searches a customer based on 
 	 * the customer's id from a list of customers.
