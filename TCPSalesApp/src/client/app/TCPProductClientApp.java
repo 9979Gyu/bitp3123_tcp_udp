@@ -36,7 +36,7 @@ public class TCPProductClientApp {
 			DataOutputStream dos = new DataOutputStream(os);
 			
 			// 2. Send request to the server
-			int productId = 1003;
+			int productId = 1008;
 			dos.writeInt(productId);
 			System.out.println("\tRequesting product id " + productId + "\n");
 			

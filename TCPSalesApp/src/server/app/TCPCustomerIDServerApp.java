@@ -16,12 +16,13 @@ import server.controller.CustomerDataManager;
 /**
  * @author yuqin
  *
+ * Part 3 Exercise 6
  */
 
 /*
  * This class will process requests from client 
  */
-public class TCPCustomerServerApp {
+public class TCPCustomerIDServerApp {
 
 	/**
 	 * @param args
@@ -32,7 +33,7 @@ public class TCPCustomerServerApp {
 		
 		CustomerDataManager manager = new CustomerDataManager();
 		
-		System.out.println("\n\tExecuting TCPCustomerServerApp");
+		System.out.println("\n\tExecuting TCPCustomerIDServerApp");
 		
 		try {
 			
@@ -48,25 +49,25 @@ public class TCPCustomerServerApp {
 				Socket clientSocket = serverSocket.accept();
 				
 				// 4. Process request - create input stream to read request
-				// Request - customer name:string
 				InputStream is = clientSocket.getInputStream();
 				DataInputStream dis = new DataInputStream(is);
 				
-				// Read customer name from client
-				String customerName = dis.readUTF();
-				System.out.println("\tRequest for customer name : " 
-						+ customerName);
+				// Request - customer id:int
+				// Read customer id from client
+				int customerId = dis.readInt();
+				System.out.println("\n\tRequest for customer id : " 
+						+ customerId);
 				
 				// Get customer
-				Customer customer = manager.getCustomer(customerName);
+				Customer customer = manager.getCustomerById(customerId);
 				
 				// 5. Respond to client
 				OutputStream os  = clientSocket.getOutputStream();
 				ObjectOutputStream oos = new ObjectOutputStream(os);
 				oos.writeObject(customer);
-				System.out.print("\tSending customer data : " 
-						+ customer.getId() + " " + customer.getName());
 				
+				System.out.print("\tSending customer data : " + 
+						customer.getId() + " " + customer.getName() + "\n");
 			}
 			
 		} catch (Exception ex) {

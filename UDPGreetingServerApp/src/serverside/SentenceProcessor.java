@@ -1,5 +1,8 @@
 package serverside;
 
+/**
+ * Part 2 Exercise 2
+ */
 public class SentenceProcessor {
 	
 	private int size = 65535;
@@ -50,7 +53,9 @@ public class SentenceProcessor {
         return index - 1;
 	}
 	
-	/*
+	/**
+	 * @author yuqin
+	 * 
 	 * This method count the number of vowels in a sentence
 	 * @return
 	 */
@@ -76,7 +81,9 @@ public class SentenceProcessor {
         return counter;
 	}
 	
-	/*
+	/**
+	 * @author yuqin
+	 * 
 	 * This method count the number of consonants in a sentence
 	 * @return
 	 */
@@ -111,7 +118,9 @@ public class SentenceProcessor {
         return counter;
 	}
 	
-	/*
+	/**
+	 * @author yuqin
+	 * 
 	 * This method count the number of punctuations in a sentence
 	 * @return
 	 */

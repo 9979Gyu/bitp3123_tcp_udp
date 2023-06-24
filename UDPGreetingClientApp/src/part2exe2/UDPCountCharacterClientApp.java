@@ -11,7 +11,8 @@ import java.util.Scanner;
 
 /**
  * @author yuqin
- *
+ * 
+ * Part 2 Exercise 2
  */
 public class UDPCountCharacterClientApp {
 

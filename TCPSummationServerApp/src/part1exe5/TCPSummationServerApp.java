@@ -13,7 +13,8 @@ import controller.NumberCalculator;
  * 
  * @author emalianakasmuri
  * @author yuqin
- *
+ * 
+ * Part 1 Exercise 5
  */
 public class TCPSummationServerApp {
 
@@ -58,8 +59,6 @@ public class TCPSummationServerApp {
 				dos.writeInt(multiply);
 				System.out.println("\tTo client: Summation : " + total + 
 						" , Multiplication : " + multiply);
-				// To client: Summation : 213 , Multiplication : 6000
-				
 				// In string + is not for addition/summation
 				// In string + is concatenation, joining two string
 				

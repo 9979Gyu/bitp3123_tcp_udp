@@ -3,14 +3,16 @@
  */
 package model;
 
+import java.io.Serializable;
+
 /**
  * @author yuqin
  *
  */
-public class Customer {
+public class Customer implements Serializable{
 	
-	private int id = 0;
-	private String name = null;
+	private int id;
+	private String name;
 	
 	/**
 	 * @return the id

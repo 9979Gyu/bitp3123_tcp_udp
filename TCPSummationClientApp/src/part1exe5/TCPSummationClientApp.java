@@ -16,6 +16,7 @@ import java.util.Scanner;
  * @author emalianakasmuri
  * @author yuqin
  *
+ * Part 1 Exercise 5
  */
 
 public class TCPSummationClientApp {
