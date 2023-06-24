@@ -74,7 +74,7 @@ public class TCPCustomerNameServerApp {
 							customer.getId() + " " + customer.getName() + "\n");
 				}
 				else {
-					System.out.print("\tSending customer data : " + customer);
+					System.out.print("\tSending customer data : " + customer + "\n");
 				}
 				
 				
